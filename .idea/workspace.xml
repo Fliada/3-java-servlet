@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="создание сервлета, подключпение зависимсотей и деплой">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/DownloadServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/files.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +25,19 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jasper/9.0.12/tomcat-jasper-9.0.12-sources.jar!/org/apache/jasper/servlet/JspServlet.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,19 +56,22 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "I:/repos/Repositories/java-servlet",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp" />
-      <recent name="I:\repos\Repositories\java-servlet\src\main" />
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\static" />
+      <recent name="I:\repos\Repositories\java-servlet" />
+      <recent name="I:\repos\Repositories\java-servlet\src" />
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\png" />
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\ROOT" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="java-servlet [clean,tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="java-servlet [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -69,7 +82,6 @@
             </option>
             <option name="goals">
               <list>
-                <option value="clean" />
                 <option value="tomcat7:run" />
               </list>
             </option>
@@ -82,7 +94,9 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method v="2" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean" />
+      </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -94,7 +108,16 @@
       <option name="presentableId" value="Default" />
       <updated>1677164797313</updated>
       <workItem from="1677164798824" duration="390000" />
-      <workItem from="1677165230225" duration="9548000" />
+      <workItem from="1677165230225" duration="10605000" />
+      <workItem from="1677179297729" duration="8639000" />
+      <workItem from="1677226880847" duration="287000" />
+      <workItem from="1677227326160" duration="3217000" />
+      <workItem from="1677343047159" duration="760000" />
+      <workItem from="1677403043198" duration="20605000" />
+      <workItem from="1677943311483" duration="8122000" />
+      <workItem from="1677953842241" duration="9303000" />
+      <workItem from="1678008830915" duration="186000" />
+      <workItem from="1678009189546" duration="19351000" />
     </task>
     <task id="LOCAL-00001" summary="добавлен .gitignore">
       <created>1677165265701</created>
@@ -110,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677165392764</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="создание сервлета, подключпение зависимсотей и деплой">
+      <created>1677178498523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677178498523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +172,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавлен .gitignore" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="создание сервлета, подключпение зависимсотей и деплой" />
+    <option name="LAST_COMMIT_MESSAGE" value="создание сервлета, подключпение зависимсотей и деплой" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/example/DownloadServlet.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

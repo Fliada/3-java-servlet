@@ -8,10 +8,22 @@
         <servlet-name>dirServlet</servlet-name>
         <servlet-class>example.DirectoryServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>dirServlet</servlet-name>
-        <url-pattern>/servlet</url-pattern>
+        <url-pattern>/files</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/static/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>jsp-servlet</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsp-servlet</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+    </servlet-mapping>
 </web-app>
