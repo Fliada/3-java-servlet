@@ -4,14 +4,6 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
-    <servlet>
-        <servlet-name>dirServlet</servlet-name>
-        <servlet-class>example.DirectoryServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>dirServlet</servlet-name>
-        <url-pattern>/files</url-pattern>
-    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>default</servlet-name>

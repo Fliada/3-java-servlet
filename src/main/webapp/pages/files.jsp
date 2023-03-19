@@ -16,7 +16,7 @@
 
 <h1><%= request.getAttribute("path") %></h1>
 
-    <a href="${pageContext.request.contextPath}/files?path=<%=  request.getAttribute("prev") %>"><img src="../static/images/redir.png" alt="folder" style="width: 64px; height: 64px;"></a>
+    <a href="${pageContext.request.contextPath}/files?path=<%=  request.getAttribute("prev") %>"><img src="static/images/redir.png" alt="folder" style="width: 64px; height: 64px;"></a>
 
 <hr/>
     <table id="messages" border="1">
@@ -37,7 +37,7 @@
             for(File file : list) {
         %>
         <tr>
-            <td><img src="<%=file.isDirectory() ? "../static/images/folder.png" : "../static/images/file.png" %>" alt="f" style="width: 32px; height: 32px;"></td>
+            <td><img src="<%=file.isDirectory() ? "static/images/folder.png" : "static/images/file.png" %>" alt="f" style="width: 32px; height: 32px;"></td>
             <td>
                 <% if(file.isFile()) { %>
                 <a href="${pageContext.request.contextPath}/download?path=<%= file.getAbsolutePath() %>">

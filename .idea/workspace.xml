@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="java-servlet:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="создание сервлета, подключпение зависимсотей и деплой">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/DownloadServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/files.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/DownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/DownloadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/files.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "I:/repos/Repositories/java-servlet",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;I:/repos/Repositories/java-servlet&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp" />
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\WEB-INF\pages" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\static" />
       <recent name="I:\repos\Repositories\java-servlet" />
       <recent name="I:\repos\Repositories\java-servlet\src" />
-      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\png" />
-      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\ROOT" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +117,12 @@
       <workItem from="1677943311483" duration="8122000" />
       <workItem from="1677953842241" duration="9303000" />
       <workItem from="1678008830915" duration="186000" />
-      <workItem from="1678009189546" duration="19351000" />
+      <workItem from="1678009189546" duration="26358000" />
+      <workItem from="1678636063534" duration="41000" />
+      <workItem from="1678647541462" duration="2207000" />
+      <workItem from="1678658035459" duration="19067000" />
+      <workItem from="1679238152830" duration="16000" />
+      <workItem from="1679248826094" duration="3129000" />
     </task>
     <task id="LOCAL-00001" summary="добавлен .gitignore">
       <created>1677165265701</created>
@@ -140,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677178498523</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="дело сделано">
+      <created>1678036860111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678036860111</updated>
+    </task>
+    <task id="LOCAL-00005" summary="png">
+      <created>1678036888779</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678036888779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +192,9 @@
     <MESSAGE value="добавлен .gitignore" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="создание сервлета, подключпение зависимсотей и деплой" />
-    <option name="LAST_COMMIT_MESSAGE" value="создание сервлета, подключпение зависимсотей и деплой" />
+    <MESSAGE value="дело сделано" />
+    <MESSAGE value="png" />
+    <option name="LAST_COMMIT_MESSAGE" value="png" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -182,12 +203,11 @@
           <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/example/DownloadServlet.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

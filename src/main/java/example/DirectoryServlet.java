@@ -45,7 +45,9 @@ public class DirectoryServlet extends HttpServlet {
         if(folder.getParent() != null)
             request.setAttribute("prev", folder.getParentFile().getCanonicalPath());
 
-        getServletContext().getRequestDispatcher(request.getContextPath() + "/WEB-INF/files.jsp")
+        getServletContext().getRequestDispatcher("/pages/files.jsp")
                 .forward(request, response);
+
+        //response.sendRedirect(request.getContextPath() + "/pages/files.jsp");
     }
 }
