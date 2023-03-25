@@ -9,11 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="fgjdfjdfhndf">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/accounts/UserProfile.java" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="добавлен UserProfile">
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/accounts/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/MainServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/login-page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/login-page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/DownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DownloadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/accounts/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/accounts/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "I:/repos/Repositories/java-servlet",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.applicationServers"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;I:/repos/Repositories/java-servlet&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.applicationServers&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\pages" />
+      <recent name="I:\repos\Repositories\java-servlet\public_pages" />
+      <recent name="I:\repos\Repositories\java-servlet\src\main\java" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\WEB-INF\pages" />
-      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\static" />
-      <recent name="I:\repos\Repositories\java-servlet" />
-      <recent name="I:\repos\Repositories\java-servlet\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -121,7 +128,8 @@
       <workItem from="1678658035459" duration="19067000" />
       <workItem from="1679238152830" duration="16000" />
       <workItem from="1679248826094" duration="4353000" />
-      <workItem from="1679732378920" duration="366000" />
+      <workItem from="1679732378920" duration="13032000" />
+      <workItem from="1679748733699" duration="3204000" />
     </task>
     <task id="LOCAL-00001" summary="добавлен .gitignore">
       <created>1677165265701</created>
@@ -165,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679252680312</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="добавлен UserProfile">
+      <created>1679732767208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679732767208</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +216,8 @@
     <MESSAGE value="дело сделано" />
     <MESSAGE value="png" />
     <MESSAGE value="fgjdfjdfhndf" />
-    <option name="LAST_COMMIT_MESSAGE" value="fgjdfjdfhndf" />
+    <MESSAGE value="добавлен UserProfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен UserProfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
