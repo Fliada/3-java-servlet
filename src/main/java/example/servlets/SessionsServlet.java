@@ -3,13 +3,12 @@ package example.servlets;
 import example.accounts.AccountService;
 import example.accounts.UserProfile;
 import com.google.gson.Gson;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "SessionsServlet", urlPatterns = {"/api/v1/sessions"})
 public class SessionsServlet extends HttpServlet {
     private final AccountService accountService;
 
@@ -59,6 +58,10 @@ public class SessionsServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().println(json);
         response.setStatus(HttpServletResponse.SC_OK);
+
+        response.sendRedirect(request.getContextPath() + "/files");
+        //getServletContext().getRequestDispatcher("/files")
+                //.forward(request, response);
     }
 
     //sign out
@@ -75,6 +78,5 @@ public class SessionsServlet extends HttpServlet {
             response.getWriter().println("Goodbye!");
             response.setStatus(HttpServletResponse.SC_OK);
         }
-
     }
 }

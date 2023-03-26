@@ -16,7 +16,7 @@
 
 <h1><%= request.getAttribute("path") %></h1>
 
-    <a href="${pageContext.request.contextPath}/files?path=<%=  request.getAttribute("prev") %>"><img src="static/images/redir.png" alt="folder" style="width: 64px; height: 64px;"></a>
+    <a href="${pageContext.request.contextPath}/files?path=<%=  request.getAttribute("prev") %>"><img src="../static/images/redir.png" alt="folder" style="width: 64px; height: 64px;"></a>
 
 <hr/>
     <table id="messages" border="1">

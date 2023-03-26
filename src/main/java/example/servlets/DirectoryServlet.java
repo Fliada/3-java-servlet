@@ -1,17 +1,19 @@
 package example.servlets;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Comparator;
 
-@WebServlet(name = "dirServlet", urlPatterns = {"/files"})
+@WebServlet("/files")
 public class DirectoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -45,9 +47,9 @@ public class DirectoryServlet extends HttpServlet {
         if(folder.getParent() != null)
             request.setAttribute("prev", folder.getParentFile().getCanonicalPath());
 
-        getServletContext().getRequestDispatcher("/pages/files.jsp")
+       getServletContext().getRequestDispatcher(request.getContextPath() + "pages/files.jsp")
                 .forward(request, response);
 
-        //response.sendRedirect(request.getContextPath() + "/pages/files.jsp");
+       //response.sendRedirect(request.getContextPath() + "/pages/files.jsp");
     }
 }
