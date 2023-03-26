@@ -54,7 +54,7 @@ public class SessionsServlet extends HttpServlet {
         if (profile == null || !profile.getPass().equals(pass)) {
             response.setContentType("text/html;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            response.sendRedirect("/pages/index.html");
+            response.sendRedirect("/");
             return;
         }
 

@@ -16,9 +16,9 @@
 
 <%= request.getAttribute("time") %>
 
-    <a href="/api/v1/sessions" methods="DELETE"><button class="element-grid__delite-button" style="float: right;" type="button">
-        Sign out</button>
-    </a>
+    <form action="/sign-out" style="float: right;" type="button" method="post">
+        <button class="element-grid__delite-button" type="submit">Sign out</button>
+    </form>
 
 <h1><%= new String(request.getAttribute("path").toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8) %></h1>
 

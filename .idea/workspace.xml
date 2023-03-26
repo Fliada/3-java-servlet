@@ -9,9 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="работает">
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="аааааааааааааааааааааааааа">
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SignOutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679862404491</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="аааааааааааааааааааааааааа">
+      <created>1679863550209</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679863550209</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +248,8 @@
     <MESSAGE value="фафацфы" />
     <MESSAGE value="сервлеты работают?" />
     <MESSAGE value="работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="работает" />
+    <MESSAGE value="аааааааааааааааааааааааааа" />
+    <option name="LAST_COMMIT_MESSAGE" value="аааааааааааааааааааааааааа" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,11 +258,6 @@
           <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

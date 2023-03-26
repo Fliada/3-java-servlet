@@ -42,7 +42,7 @@ public class UsersServlet extends HttpServlet {
             return;
         }
 
-        accountService.addNewUser(new UserProfile(login, email, pass));
+        accountService.addNewUser(new UserProfile(login, pass, email));
 
         response.setStatus(HttpServletResponse.SC_OK);
 

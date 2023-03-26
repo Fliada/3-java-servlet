@@ -54,7 +54,7 @@ public class DirectoryServlet extends HttpServlet {
             File root = new File(new String(request.getAttribute(fileRoot).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
             File folder = new File(new String(request.getParameter(pathParam).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
 
-            if(root.getAbsolutePath().compareTo(folder.getAbsolutePath()) > 0)
+            if(root.getCanonicalPath().compareTo(folder.getCanonicalPath()) > 0)
                 request.setAttribute(pathParam, request.getAttribute(fileRoot).toString());
             else
                 request.setAttribute(pathParam, request.getParameter(pathParam));
@@ -71,7 +71,7 @@ public class DirectoryServlet extends HttpServlet {
 
         request.setAttribute(filesAtt, listOfFiles);
 
-        if(folder.getParent() != null && folder.getCanonicalPath().compareTo(new File(request.getAttribute(fileRoot).toString()).getCanonicalPath()) < 0)
+        if(folder.getParent() != null || folder.getCanonicalPath().compareTo(new File(request.getAttribute(fileRoot).toString()).getCanonicalPath()) < 0)
             request.setAttribute("prev", folder.getParentFile().getCanonicalPath());
         else
             request.setAttribute("prev", new String(request.getAttribute(pathParam).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
