@@ -9,15 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="добавлен UserProfile">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/accounts/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/login-page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="ээээ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/css/login-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1d510341f557c627b9fb2100ce09240bfdd7268a" />
+        <entry key="$PROJECT_DIR$" value="9d11ed6211e009d219625f3dd0fc793cace26305" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,11 +69,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\pages" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\WEB-INF\pages" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\static" />
       <recent name="I:\repos\Repositories\java-servlet" />
-      <recent name="I:\repos\Repositories\java-servlet\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -175,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679252680312</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ээээ">
+      <created>1679848051885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679848051885</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +197,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="task5" />
                       </list>
                     </value>
                   </entry>
@@ -211,7 +216,8 @@
     <MESSAGE value="дело сделано" />
     <MESSAGE value="png" />
     <MESSAGE value="fgjdfjdfhndf" />
-    <option name="LAST_COMMIT_MESSAGE" value="fgjdfjdfhndf" />
+    <MESSAGE value="ээээ" />
+    <option name="LAST_COMMIT_MESSAGE" value="ээээ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

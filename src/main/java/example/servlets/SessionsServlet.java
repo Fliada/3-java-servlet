@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("api/v1/sessions")
+//@WebServlet("api/v1/sessions")
 public class SessionsServlet extends HttpServlet {
     private final AccountService accountService;
 
