@@ -9,11 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="фафацфы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="сервлеты работают?">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/files.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/login-page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/accounts/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/accounts/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/DownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DownloadServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/css/login-page.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +76,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\pages\css" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\pages" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\WEB-INF\pages" />
       <recent name="I:\repos\Repositories\java-servlet\src\main\webapp\static" />
-      <recent name="I:\repos\Repositories\java-servlet" />
     </key>
   </component>
   <component name="RunManager">
@@ -185,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679849424220</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="сервлеты работают?">
+      <created>1679850201201</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679850201201</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +239,8 @@
     <MESSAGE value="fgjdfjdfhndf" />
     <MESSAGE value="ээээ" />
     <MESSAGE value="фафацфы" />
-    <option name="LAST_COMMIT_MESSAGE" value="фафацфы" />
+    <MESSAGE value="сервлеты работают?" />
+    <option name="LAST_COMMIT_MESSAGE" value="сервлеты работают?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,8 +251,8 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="11" />
+          <line>87</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

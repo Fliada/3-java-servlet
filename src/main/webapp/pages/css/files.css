@@ -1,0 +1,23 @@
+img {
+    width: auto;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.element-grid__element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 282px;
+    height: 282px;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.element-grid__delite-button {
+    background-color: lightgray;
+}

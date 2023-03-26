@@ -8,11 +8,17 @@
 <html lang="ru">
 <head>
     <%@ page contentType="text/html; charset=UTF-8"  %>
+    <link rel="stylesheet" type="text/css" href="/pages/css/files.css">
     <title>First JSP</title>
 </head>
 <body>
 <font face="Montserrat, Consolas, Arial">
+
 <%= request.getAttribute("time") %>
+
+    <a href="/api/v1/sessions" methods="DELETE"><button class="element-grid__delite-button" style="float: right;" type="button">
+        Sign out</button>
+    </a>
 
 <h1><%= request.getAttribute("path") %></h1>
 
@@ -55,7 +61,6 @@
         <% } %>
         </tbody>
     </table>
-
 </font>
 </body>
 </html>
