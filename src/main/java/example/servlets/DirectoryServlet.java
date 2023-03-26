@@ -3,11 +3,13 @@ package example.servlets;
 import example.AccountServiceHandler;
 import example.accounts.AccountService;
 
+import javax.print.attribute.standard.MediaSize;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -30,15 +32,17 @@ public class DirectoryServlet extends HttpServlet {
         String filesAtt  = "files";
         String fileRoot  = "root";
 
-        if(accountService.getUserBySessionId(request.getSession().getId()) == null)
-            response.sendRedirect( "/");
+        if(accountService.getUserBySessionId(request.getSession().getId()) == null) {
+            response.sendRedirect("/");
+            return;
+        }
 
         if(request.getAttribute(timeAtt) == null)
             request.setAttribute("time", LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")));
 
         if(request.getParameter(fileRoot) == null) {
             request.setAttribute(fileRoot, "C:\\Users\\Public\\filemanager\\" + accountService.getUserBySessionId(request.getSession().getId()).getLogin());
-            File folder = new File(request.getAttribute(fileRoot).toString());
+            File folder = new File(new String(request.getAttribute(fileRoot).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
             if(!folder.exists())
                 folder.mkdirs();
         }
@@ -47,8 +51,8 @@ public class DirectoryServlet extends HttpServlet {
             request.setAttribute(pathParam, request.getAttribute(fileRoot).toString());
         }
         else {
-            File root = new File(request.getAttribute(fileRoot).toString());
-            File folder = new File(request.getParameter(pathParam));
+            File root = new File(new String(request.getAttribute(fileRoot).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+            File folder = new File(new String(request.getParameter(pathParam).getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
 
             if(root.getAbsolutePath().compareTo(folder.getAbsolutePath()) > 0)
                 request.setAttribute(pathParam, request.getAttribute(fileRoot).toString());
@@ -56,7 +60,7 @@ public class DirectoryServlet extends HttpServlet {
                 request.setAttribute(pathParam, request.getParameter(pathParam));
         }
 
-        File folder = new File(request.getAttribute(pathParam).toString());
+        File folder = new File(new String(request.getAttribute(pathParam).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
         File[] listOfFiles = folder.listFiles();
 
         if(listOfFiles == null) listOfFiles = new File[0];
@@ -70,7 +74,7 @@ public class DirectoryServlet extends HttpServlet {
         if(folder.getParent() != null && folder.getCanonicalPath().compareTo(new File(request.getAttribute(fileRoot).toString()).getCanonicalPath()) < 0)
             request.setAttribute("prev", folder.getParentFile().getCanonicalPath());
         else
-            request.setAttribute("prev", request.getAttribute(pathParam).toString());
+            request.setAttribute("prev", new String(request.getAttribute(pathParam).toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
 
         getServletContext().getRequestDispatcher("/pages/files.jsp")
                 .forward(request, response);

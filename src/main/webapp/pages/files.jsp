@@ -20,7 +20,7 @@
         Sign out</button>
     </a>
 
-<h1><%= request.getAttribute("path") %></h1>
+<h1><%= new String(request.getAttribute("path").toString().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8) %></h1>
 
     <a href="${pageContext.request.contextPath}/files?path=<%=  request.getAttribute("prev") %>"><img src="static/images/redir.png" alt="folder" style="width: 64px; height: 64px;"></a>
 
