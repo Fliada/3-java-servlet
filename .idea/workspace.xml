@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="ээээ">
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="фафацфы">
+      <change afterPath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/css/login-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login-page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -180,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679848051885</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="фафацфы">
+      <created>1679849424220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679849424220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +222,8 @@
     <MESSAGE value="png" />
     <MESSAGE value="fgjdfjdfhndf" />
     <MESSAGE value="ээээ" />
-    <option name="LAST_COMMIT_MESSAGE" value="ээээ" />
+    <MESSAGE value="фафацфы" />
+    <option name="LAST_COMMIT_MESSAGE" value="фафацфы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -226,6 +232,11 @@
           <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
           <option name="timeStamp" value="9" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

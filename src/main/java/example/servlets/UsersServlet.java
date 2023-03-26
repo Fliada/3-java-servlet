@@ -1,5 +1,6 @@
 package example.servlets;
 
+import example.AccountServiceHandler;
 import example.accounts.AccountService;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +15,8 @@ public class UsersServlet extends HttpServlet {
     @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"}) //todo: remove after module 2 home work
     private final AccountService accountService;
 
-    public UsersServlet(AccountService accountService) {
-        this.accountService = accountService;
+    public UsersServlet() {
+        this.accountService = AccountServiceHandler.getAccountService();
     }
 
     //get public user profile

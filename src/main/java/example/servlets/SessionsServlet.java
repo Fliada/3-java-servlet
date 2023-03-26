@@ -1,5 +1,6 @@
 package example.servlets;
 
+import example.AccountServiceHandler;
 import example.accounts.AccountService;
 import example.accounts.UserProfile;
 import com.google.gson.Gson;
@@ -10,12 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet("api/v1/sessions")
+@WebServlet(name = "ssnServ", urlPatterns = {"/api/v1/sessions"})
 public class SessionsServlet extends HttpServlet {
     private final AccountService accountService;
 
-    public SessionsServlet(AccountService accountService) {
-        this.accountService = accountService;
+    public SessionsServlet() {
+        this.accountService = AccountServiceHandler.getAccountService();
     }
 
     //get logged user profile
