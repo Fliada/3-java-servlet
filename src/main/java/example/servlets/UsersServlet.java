@@ -1,5 +1,9 @@
 package example.servlets;
 
+import example.dbService.DBException;
+import example.dbService.DBService;
+import example.dbService.dataSets.UsersDataSet;
+
 import com.google.gson.Gson;
 import example.AccountServiceHandler;
 import example.accounts.AccountService;
@@ -15,7 +19,7 @@ import java.io.IOException;
 
 @WebServlet(name = "usersServlet", urlPatterns = {"/api/v1/users"})
 public class UsersServlet extends HttpServlet {
-    @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"}) //todo: remove after module 2 home work
+    @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"})
     private final AccountService accountService;
 
     public UsersServlet() {
@@ -35,12 +39,12 @@ public class UsersServlet extends HttpServlet {
         String email = request.getParameter("email");
         String pass = request.getParameter("pass");
 
-        if (login == null || pass == null || email == null || accountService.getUserByLogin(login) != null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            response.sendRedirect("/pages/signup.html");
-            return;
-        }
+            if (login == null || pass == null || email == null || accountService.getUserByLogin(login) != null) {
+                response.setContentType("text/html;charset=utf-8");
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                response.sendRedirect("/pages/signup.html");
+                return;
+            }
 
         accountService.addNewUser(new UserProfile(login, pass, email));
 

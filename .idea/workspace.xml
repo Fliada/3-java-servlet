@@ -10,13 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="добавлены зависимости">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/DBException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/DBService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/dao/UsersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/dataSets/UsersDataSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/executor/Executor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/dbService/executor/ResultHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/AccountServiceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/accounts/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/accounts/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/dbService/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/dbService/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/dbService/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/dbService/dao/UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/dbService/dataSets/UsersDataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/dbService/dataSets/UsersDataSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +231,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -240,7 +254,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="task6" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>

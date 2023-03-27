@@ -4,6 +4,8 @@ import example.AccountServiceHandler;
 import example.accounts.AccountService;
 import example.accounts.UserProfile;
 import com.google.gson.Gson;
+import example.dbService.DBException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,6 +53,7 @@ public class SessionsServlet extends HttpServlet {
         }
 
         UserProfile profile = accountService.getUserByLogin(login);
+
         if (profile == null || !profile.getPass().equals(pass)) {
             response.setContentType("text/html;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
