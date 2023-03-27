@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="аааааааааааааааааааааааааа">
-      <change afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SignOutServlet.java" afterDir="false" />
+    <list default="true" id="f57f471b-7413-448a-9bff-785021d9295c" name="Changes" comment="работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/DirectoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/SessionsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/servlets/UsersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/files.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="9d11ed6211e009d219625f3dd0fc793cace26305" />
+        <entry key="$PROJECT_DIR$" value="task5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -208,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679863550209</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="работает">
+      <created>1679866794712</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679866794712</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +227,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="task5" />
+                        <option value="task6" />
                       </list>
                     </value>
                   </entry>
@@ -247,9 +249,9 @@
     <MESSAGE value="ээээ" />
     <MESSAGE value="фафацфы" />
     <MESSAGE value="сервлеты работают?" />
-    <MESSAGE value="работает" />
     <MESSAGE value="аааааааааааааааааааааааааа" />
-    <option name="LAST_COMMIT_MESSAGE" value="аааааааааааааааааааааааааа" />
+    <MESSAGE value="работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="работает" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
