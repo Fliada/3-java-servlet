@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AccountService {
-    private final Map<String, UserProfile> sessionIdToProfile;
+    private final Map<String, UsersDataSet> sessionIdToProfile;
     DBService dbService = new DBService();
 
     public AccountService() {
@@ -16,30 +16,26 @@ public class AccountService {
         sessionIdToProfile = new HashMap<>();
     }
 
-    public void addNewUser(UserProfile user) {
-        try {
-            dbService.addUser(user);
-        } catch (DBException e) {
-            e.printStackTrace();
-        }
+    public void addNewUser(String name, String email, String pass) throws DBException {
+        dbService.addUser(name, email, pass);
     }
 
-    public UserProfile getUserByLogin(String login) {
+    public UsersDataSet getUserByLogin(String login) {
         //return loginToProfile.get(login);
         UsersDataSet set = null;
         try {
             set = dbService.getUserByLogin(login);
-        } catch (DBException e) {
+        } catch (Exception e) {
             return null;
         }
-        return new UserProfile(set.getName(), set.getPass(), set.getEmail());
+        return set;
     }
 
-    public UserProfile getUserBySessionId(String sessionId) {
+    public UsersDataSet getUserBySessionId(String sessionId) {
         return sessionIdToProfile.get(sessionId);
     }
 
-    public void addSession(String sessionId, UserProfile userProfile) {
+    public void addSession(String sessionId, UsersDataSet userProfile) {
         sessionIdToProfile.put(sessionId, userProfile);
     }
 

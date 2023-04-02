@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
-public class UsersDataSet {
+public class UsersDataSet implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +30,11 @@ public class UsersDataSet {
         this.setName(name);
         this.setEmail(email);
         this.setPass(pass);
+    }
+
+    @SuppressWarnings("UnusedDeclaration")
+    public UsersDataSet() {
+
     }
 
     public String getName() {

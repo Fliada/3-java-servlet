@@ -1,71 +1,77 @@
 package example.dbService;
 
-import example.accounts.UserProfile;
 import example.dbService.dao.UsersDAO;
 import example.dbService.dataSets.UsersDataSet;
-import org.h2.jdbcx.JdbcDataSource;
 
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.internal.SessionFactoryImpl;
+import org.hibernate.service.ServiceRegistry;
+
 public class DBService {
-    private final Connection connection;
+
+    private static final String hibernate_show_sql = "true";
+
+    //авт. проверяет схему бд при создании SessionFactory, другие: validate, update, create, create-drop
+    private static final String hibernate_hbm2ddl_auto = "validate";
+    private final SessionFactory sessionFactory;
 
     public DBService() {
-        this.connection = getH2Connection();
+        Configuration configuration = getH2Configuration();
+        sessionFactory = createSessionFactory(configuration);
     }
 
     public UsersDataSet getUser(long id) throws DBException {
         try {
-            return (new UsersDAO(connection).get(id));
-        } catch (SQLException e) {
+            Session session = sessionFactory.openSession();
+            UsersDAO dao = new UsersDAO(session);
+            UsersDataSet dataSet = dao.get(id);
+            session.close();
+            return dataSet;
+        } catch (HibernateException e) {
             throw new DBException(e);
         }
     }
 
     public UsersDataSet getUserByLogin(String login) throws DBException {
         try {
-            return (new UsersDAO(connection).getUserByLogin(login));
-        } catch (SQLException e) {
+            Session session = sessionFactory.openSession();
+            UsersDAO dao = new UsersDAO(session);
+            UsersDataSet dataSet = dao.getUserByLogin(login);
+            session.close();
+            return dataSet;
+        } catch (HibernateException e) {
             throw new DBException(e);
         }
     }
 
-    public long addUser(UserProfile user) throws DBException {
+    public long addUser(String name, String email, String pass) throws DBException {
         try {
-            connection.setAutoCommit(false);
-            UsersDAO dao = new UsersDAO(connection);
-            dao.createTable();
-            dao.insertUser(user);
-            connection.commit();
-            return dao.getUserId(user);
-        } catch (SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException ignore) {
-            }
-            throw new DBException(e);
-        } finally {
-            try {
-                connection.setAutoCommit(true);
-            } catch (SQLException ignore) {
-            }
-        }
-    }
-
-    public void cleanUp() throws DBException {
-        UsersDAO dao = new UsersDAO(connection);
-        try {
-            dao.dropTable();
-        } catch (SQLException e) {
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+            UsersDAO dao = new UsersDAO(session);
+            long id = dao.insertUser(name, email, pass);
+            transaction.commit();
+            session.close();
+            return id;
+        } catch (HibernateException e) {
             throw new DBException(e);
         }
     }
 
     public void printConnectInfo() {
         try {
+            SessionFactoryImpl sessionFactoryImpl = (SessionFactoryImpl) sessionFactory;
+            Connection connection = sessionFactoryImpl.getConnectionProvider().getConnection();
             System.out.println("DB name: " + connection.getMetaData().getDatabaseProductName());
             System.out.println("DB version: " + connection.getMetaData().getDatabaseProductVersion());
             System.out.println("Driver: " + connection.getMetaData().getDriverName());
@@ -92,30 +98,33 @@ public class DBService {
 
             System.out.println("URL: " + url + "\n");
 
-            Connection connection = DriverManager.getConnection(url.toString());
-            return connection;
+            return DriverManager.getConnection(url.toString());
         } catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public static Connection getH2Connection() {
-        try {
-            String url = "jdbc:h2:./h2db";
-            String name = "root";
-            String pass = "root";
+    private Configuration getH2Configuration() {
+        Configuration configuration = new Configuration();
+        configuration.addAnnotatedClass(UsersDataSet.class);
 
-            JdbcDataSource ds = new JdbcDataSource();
-            ds.setURL(url);
-            ds.setUser(name);
-            ds.setPassword(pass);
+        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+        configuration.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
+        configuration.setProperty("hibernate.connection.url", "jdbc:h2:./h2db");
+        configuration.setProperty("hibernate.connection.username", "root");
+        configuration.setProperty("hibernate.connection.password", "root");
+        configuration.setProperty("hibernate.show_sql", hibernate_show_sql);
+        configuration.setProperty("hibernate.hbm2ddl.auto", hibernate_hbm2ddl_auto);
+        return configuration;
+    }
 
-            Connection connection = DriverManager.getConnection(url, name, pass);
-            return connection;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+    //какая-то странная настройка фабрики сессий
+    //фабрика сессий это фабрика задачи которой производить сессии, а сессии позволяют делать запросы к базе
+    private static SessionFactory createSessionFactory(Configuration configuration) {
+        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
+        builder.applySettings(configuration.getProperties());
+        ServiceRegistry serviceRegistry = builder.build();
+        return configuration.buildSessionFactory(serviceRegistry);
     }
 }

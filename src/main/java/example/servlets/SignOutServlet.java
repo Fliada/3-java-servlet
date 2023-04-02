@@ -2,7 +2,7 @@ package example.servlets;
 
 import example.AccountServiceHandler;
 import example.accounts.AccountService;
-import example.accounts.UserProfile;
+import example.dbService.dataSets.UsersDataSet;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -24,7 +24,7 @@ public class SignOutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String sessionId = request.getSession().getId();
-        UserProfile profile = accountService.getUserBySessionId(sessionId);
+        UsersDataSet profile = accountService.getUserBySessionId(sessionId);
         if (profile == null) {
             response.setContentType("text/html;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
