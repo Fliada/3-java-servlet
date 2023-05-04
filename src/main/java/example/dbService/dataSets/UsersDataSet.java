@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
+//Serializable нужен как раз для того, чтобы Hibernate мог превращать объект в строку
 public class UsersDataSet implements Serializable {
     @Id
     @Column(name = "id")
@@ -26,7 +27,6 @@ public class UsersDataSet implements Serializable {
     }
 
     public UsersDataSet(String name,String email,String pass) {
-        this.setId(-1);
         this.setName(name);
         this.setEmail(email);
         this.setPass(pass);

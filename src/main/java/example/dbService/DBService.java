@@ -19,6 +19,7 @@ import org.hibernate.service.ServiceRegistry;
 
 public class DBService {
 
+    //в логах выводит записи о том какие именно запросы к базе делает Hibernate
     private static final String hibernate_show_sql = "true";
 
     //авт. проверяет схему бд при создании SessionFactory, другие: validate, update, create, create-drop
